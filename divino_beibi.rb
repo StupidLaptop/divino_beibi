@@ -20,8 +20,11 @@ require "twitter"
 
  	def baloto_num
  		result = []
- 		6.times do
- 			result.push(rand(45)) 
+ 		until result.length == 6 do
+ 			new_num = (rand(44) + 1)
+ 			unless result.include? new_num
+ 				result.push(new_num) 
+ 			end 
  		end
  		result.sort!
  		return result.join(", ").to_s
