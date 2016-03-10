@@ -4,18 +4,18 @@ require "twitter"
 
 	@rest_client ||= Twitter::REST::Client.new do |config|
 		puts "Configuring Twitter access token..."
-		config.consumer_key = "sybEE9SSBFatGLFXC54UakwoN"
-		config.consumer_secret = "nh8npSVSTFbRe4USgBly88EQlNVBo5j18ERsotOUC4njoMQ8ze"
-		config.access_token =  "707898380144529409-wNZwn9EsOGjPZfsfrAXp6i66UXuYlJm"
-		config.access_token_secret = "RJSfgrsgxiJ4qxHa4DmgiULK6E1LEvzQHT0oyvP6d6TUL"
+		config.consumer_key = ENV['DB_CONSUMER_KEY']
+		config.consumer_secret = ENV['DB_CONSUMER_SECRET']
+		config.access_token =  ENV['DB_ACCESS_TOKEN']
+		config.access_token_secret = ENV['DB_ACCESS_TOKEN_SECRET']
 	end
 
 	stream_client ||= Twitter::Streaming::Client.new do |config|
 		puts "Configuring Twitter access token..."
-		config.consumer_key = "sybEE9SSBFatGLFXC54UakwoN"
-		config.consumer_secret = "nh8npSVSTFbRe4USgBly88EQlNVBo5j18ERsotOUC4njoMQ8ze"
-		config.access_token =  "707898380144529409-wNZwn9EsOGjPZfsfrAXp6i66UXuYlJm"
-		config.access_token_secret = "RJSfgrsgxiJ4qxHa4DmgiULK6E1LEvzQHT0oyvP6d6TUL"
+		config.consumer_key = ENV['DB_CONSUMER_KEY']
+		config.consumer_secret = ENV['DB_CONSUMER_SECRET']
+		config.access_token =  ENV['DB_ACCESS_TOKEN']
+		config.access_token_secret = ENV['DB_ACCESS_TOKEN_SECRET']
 	end	
 
  	def baloto_num
